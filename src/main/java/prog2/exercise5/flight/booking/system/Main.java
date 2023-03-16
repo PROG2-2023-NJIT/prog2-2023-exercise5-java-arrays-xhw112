@@ -9,7 +9,7 @@ public class Main
 {
     public static void main( String[] args )
     {
-        String sdepart = "2023-03-12";
+        /*String sdepart = "2023-03-12";
         LocalDate depart = LocalDate.parse(sdepart);
 
         String sreturn = "2023-03-14";
@@ -37,7 +37,7 @@ public class Main
                 "Data of departure: " + fb.getDepartureDate() + "\n" +
                 "Data of return: " + fb.getReturnDate() + "\n" +
                 "Total passengers: " + fb.getTotalPassengers() + "\n" +
-                "Total ticket price in Euros: " + fb.getTotalTicketPrice());
+                "Total ticket price in Euros: " + fb.getTotalTicketPrice());*/
 
     }
 }
