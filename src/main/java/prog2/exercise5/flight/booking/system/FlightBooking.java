@@ -26,6 +26,7 @@ public class FlightBooking {
     private String[] passengerGender;
     private int[] passengerAge;
     private String[] ticketNumber;
+    private Scanner scanner;
 
     // Constructor that takes in the number of tickets to be reserved
     public FlightBooking(int index) {
@@ -423,29 +424,26 @@ public class FlightBooking {
         return this.ticketNumber[index];
     }
     public void reserveTickets(int numTickets) {
-        Scanner input = new Scanner(System.in);
-        
-        // Loop to get details for each passenger
+
         for (int i = 0; i < numTickets; i++) {
-            System.out.println("Enter details for passenger #" + (i+1));
+            System.out.println("Enter details for passenger " + (i + 1));
             System.out.print("Full Name: ");
-            String fullName = input.nextLine();
-            setPassengerFullName(i, fullName);
-            
-            System.out.print("Gender : ");
-            String gender = input.nextLine();
-            setPassengerGender(i, gender);
-            
+            setPassengerFullName(i, scanner.nextLine());
+
+            System.out.print("Gender: ");
+            setPassengerGender(i, scanner.nextLine());
+
             System.out.print("Age: ");
-            int age = input.nextInt();
-            input.nextLine(); // clear the scanner buffer
-            setPassengerAge(i, age);
-            input.close();
-            
-            setTicketNumber(i); // generate and set the ticket number
+            setPassengerAge(i, scanner.nextInt());
+            scanner.nextLine();
+
+            setTicketNumber(i);
         }
+
+
+    }
         
-        // Get other details
+        /*// Get other details
         System.out.print("Trip Source: " + tripSource);
         
         System.out.print("Trip Destination: " + tripDestination);
@@ -460,7 +458,7 @@ public class FlightBooking {
         
         System.out.print("Ticket Price: " + totalTicketPrice);
 
-    }
+    }*/
     
 
     //getters and setters(Exe3)
