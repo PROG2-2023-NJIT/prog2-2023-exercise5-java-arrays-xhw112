@@ -36,13 +36,13 @@ public class FlightBooking {
         this.ticketNumber = new String[index];
     }
 
-    /*public FlightBooking(String[] passengerFullName,LocalDate departureDate,LocalDate returnDate,int childPassengers,int adultPassengers){
+    public FlightBooking(String[] passengerFullName,LocalDate departureDate,LocalDate returnDate,int childPassengers,int adultPassengers){
         this.passengerFullName = passengerFullName;
         this.departureDate = departureDate;
         this.returnDate = returnDate;
         this.childPassengers = childPassengers;
         this.adultPassengers = adultPassengers;
-    }*/
+    }
     //Add an attribute named BookingClass(Exe4.Tesk2)
     public enum BookingClass {
         FIRST, BUSINESS, ECONOMY;
